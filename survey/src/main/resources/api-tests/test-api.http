@@ -1,0 +1,47 @@
+### Create a New Survey (POST Request)
+POST http://localhost:8080/api/surveys
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "streetAddress": "456 Oak Avenue",
+  "city": "Metropolis",
+  "state": "NY",
+  "zip": "10001",
+  "telephone": "555-6789",
+  "email": "alice.smith@example.com",
+  "dateOfSurvey": "2025-03-27",
+  "likedCampus": "campus,dorm rooms",
+  "interestSource": "Internet",
+  "recommendation": "Likely",
+  "comments": "The campus tour was very informative and enjoyable!"
+}
+
+### Get All Surveys (GET Request)
+GET http://localhost:8080/api/surveys
+
+### Update an Existing Survey (PUT Request)
+# Replace {id} with the actual survey id returned from the POST or GET response.
+PUT http://localhost:8080/api/surveys/{id}
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "streetAddress": "456 Oak Avenue",
+  "city": "Metropolis",
+  "state": "NY",
+  "zip": "10001",
+  "telephone": "555-6789",
+  "email": "alice.smith@example.com",
+  "dateOfSurvey": "2025-03-27",
+  "likedCampus": "campus,students",
+  "interestSource": "Internet",
+  "recommendation": "Very Likely",
+  "comments": "Updated: Campus tour and facilities are excellent!"
+}
+
+### Delete a Survey (DELETE Request)
+# Replace {id} with the survey id you want to delete.
+DELETE http://localhost:8080/api/surveys/{id}
